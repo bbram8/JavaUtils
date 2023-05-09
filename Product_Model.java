@@ -16,7 +16,7 @@ public class Product_Model {
 
     //Product ID which is unique for each document in Elasticsearch
     @Id
-    private String product_id;
+    private String id;
 
     @Field(type = FieldType.Text, name = "product name")
     private String product_name;
@@ -28,6 +28,28 @@ public class Product_Model {
     private double product_price;
 
     public String getID() {
-        return product_id;
+        return id;
+    }
+
+    public void setID(String id) {
+        this.id = id;
+    }
+
+    public String getProduct_description() {
+        return product_description;
+    }
+    
+    public void setProduct_description(String description){
+        product_description = description; 
+    }
+    
+    public String getProduct_name()
+    {
+        return product_name; 
+    }
+    
+    public void setProduct_name(String name){
+        product_name = name; 
     }
 }
+
